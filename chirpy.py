@@ -10,7 +10,7 @@ def parse_arguments():
     args.add_argument('-l', '--location', help='The memory location in the radio for an entry', type=int)
     args.add_argument('-n', '--name', help='Name of this memory entry')
     args.add_argument('-f', '--frequency', help='Frequency associated with a memory location')
-    args.add_argument('-d', '--duplex', help='Duplex of our signal; supported values (+ | -)')
+    args.add_argument('-d', '--duplex', help='Duplex of our signal; supported values (+ | -)', choices=['+', '-'])
     args.add_argument('-o', '--offset', help='Offset between input and output frequencies, one should not usually have to change this', default=0.600000)
     args.add_argument('-t', '--tonemode', help='Tone mode (PL | CTCSS | DTCS)', dest='tonemode', choices=['Tone', 'TSQL', 'DTCS'])
     args.add_argument('-T', '--rtonefreq', help='PL tone frequency, cannot be used unless mode tone is specified')
